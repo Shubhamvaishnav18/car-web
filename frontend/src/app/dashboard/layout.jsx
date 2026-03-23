@@ -11,7 +11,7 @@ export default function DashboardLayout({ children }) {
     e.preventDefault();
     try {
       
-      await fetchWithAuth("http://localhost:3000/api/auth/logout", {
+      await fetchWithAuth("https://car-backend-53dx.onrender.com/api/auth/logout", {
         method: "POST"
       });
     } catch (error) {

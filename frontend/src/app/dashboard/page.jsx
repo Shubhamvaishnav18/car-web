@@ -13,7 +13,7 @@ export default function HomePage() {
     const fetchCars = async () => {
       try {
         // ✨ Normal fetch ki jagah fetchWithAuth lagaya. Token automatically chala jayega!
-        const res = await fetchWithAuth('http://localhost:3000/api/cars');
+        const res = await fetchWithAuth('https://car-backend-53dx.onrender.com/api/cars');
         if (res.ok) {
           const data = await res.json();
           setCars(data);

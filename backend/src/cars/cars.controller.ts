@@ -41,7 +41,7 @@ export class CarsController {
     const userId = this.getUserIdFromToken(authHeader);
     
     if (files && files.length > 0) {
-      carData.images = files.map(file => `http://localhost:3000/uploads/${file.filename}`);
+      carData.images = files.map(file => `https://car-backend-53dx.onrender.com/uploads/${file.filename}`);
     } else {
       carData.images = [];
     }

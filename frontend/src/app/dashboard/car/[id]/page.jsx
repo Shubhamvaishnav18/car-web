@@ -16,7 +16,7 @@ export default function CarDetailsPage() {
   useEffect(() => {
     const fetchCar = async () => {
       try {
-        const res = await fetchWithAuth(`http://localhost:3000/api/cars/${id}`);
+        const res = await fetchWithAuth(`https://car-backend-53dx.onrender.com/api/cars/${id}`);
         if (res.ok) {
           const data = await res.json();
           setCar(data);
@@ -43,7 +43,7 @@ export default function CarDetailsPage() {
   const handleSave = async () => {
     setIsSaving(true);
     try {
-      const res = await fetchWithAuth(`http://localhost:3000/api/cars/${id}`, {
+      const res = await fetchWithAuth(`https://car-backend-53dx.onrender.com/api/cars/${id}`, {
         method: 'PUT',
         body: JSON.stringify({
           ...editForm,
@@ -73,7 +73,7 @@ export default function CarDetailsPage() {
     if(!window.confirm("Are you sure you want to delete this car?")) return;
     
     try {
-        const res = await fetchWithAuth(`http://localhost:3000/api/cars/${id}`, {
+        const res = await fetchWithAuth(`https://car-backend-53dx.onrender.com/api/cars/${id}`, {
             method: 'DELETE'
         });
         if (res.ok) {

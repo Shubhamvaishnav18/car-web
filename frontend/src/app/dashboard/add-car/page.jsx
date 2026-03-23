@@ -53,7 +53,7 @@ export default function AddCarPage() {
         submitData.append("images", file);
       });
 
-      const response = await fetchWithAuth("http://localhost:3000/api/cars", {
+      const response = await fetchWithAuth("https://car-backend-53dx.onrender.com/api/cars", {
         method: "POST",
         body: submitData, 
       });
